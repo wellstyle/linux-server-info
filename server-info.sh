@@ -13,6 +13,7 @@ CPU_MHZ=`cat /proc/cpuinfo | grep "cpu MHz" | head -1 | awk -F':' '{print $2}' |
 M_TYPE=`uname -m`
 MEM_SIZE=`cat /proc/meminfo | grep MemTotal | awk '{print $2,$3}'`
 HDD_SIZE=`lsblk --nodeps --noheadings --output NAME,SIZE`
+LOCALE=`echo $LANG`
 
 printInfo "Hostname" "$HOST"
 printInfo "IP Address" "$IP_ADDR"
@@ -26,3 +27,4 @@ printInfo "Memory Size" "$MEM_SIZE"
 for hdd in $HDD_SIZE; do
         printInfo "HDD Size" "$hdd"
 done
+printInfo "Locale" "$LOCALE"
