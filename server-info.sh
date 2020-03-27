@@ -3,9 +3,9 @@
 function printInfo { printf "%-23s: %s\n" "$1" "$2"; }
 
 IFS=$'\n'
-IP_ADDR=`ifconfig -a | grep inet | head -1 | awk '{print $2}' | cut -c6-`
+IP_ADDR=`ifconfig -a | grep inet | head -1 | awk '{print $2}'`
 HOST=`uname -n`
-OS=`cat /etc/issue.net | head -1`
+OS=`cat /etc/*release* | grep PRETTY_NAME | awk -F'"' '{print $2}'`
 KERNEL=`uname -sr`
 CPU=`cat /proc/cpuinfo | grep "model name" | head -1 | awk -F':' '{print $2}' | cut -c2-`
 CPU_NUM=`cat /proc/cpuinfo | grep -c processor`
