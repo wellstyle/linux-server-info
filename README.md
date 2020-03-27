@@ -1,5 +1,8 @@
 # linux-server-info
-A simple shell script to view Linux server information
+
+A simple shell script to view Linux server information.
+
+Tested on Ubuntu, CentOS.
 
 # usage
 
