@@ -24,6 +24,6 @@ CPU                    : Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
 CPU Number             : 1
 CPU MHz                : 2500.030
 Machine Type           : x86_64
-Memory Size            : 1016292 kB
+Memory Size            : 7.97G
 HDD Size               : xvda 8589934592
 ```
